@@ -1,0 +1,28 @@
+{
+  "name": "apex-dental-clinic-system",
+  "version": "1.0.0",
+  "description": "Production-ready full-stack Dental Clinic Management System with patient portal, online booking, and Supabase integration",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node tests/api.test.js"
+  },
+  "keywords": [
+    "dental",
+    "clinic",
+    "healthcare",
+    "appointment-booking",
+    "supabase",
+    "express"
+  ],
+  "author": "Apex Dental Care",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.115.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2"
+  }
+}

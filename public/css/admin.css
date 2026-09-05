@@ -1,0 +1,243 @@
+/* ==========================================================================
+   APEX DENTAL CARE - ADMIN DASHBOARD STYLES
+   ========================================================================== */
+
+:root {
+  --admin-bg: #F1F5F9;
+  --card-bg: #FFFFFF;
+  --card-border: #E2E8F0;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  
+  --status-pending-bg: #FEF3C7;
+  --status-pending-text: #92400E;
+  --status-pending-border: #FCD34D;
+
+  --status-confirmed-bg: #E0F2FE;
+  --status-confirmed-text: #075985;
+  --status-confirmed-border: #7DD3FC;
+
+  --status-completed-bg: #D1FAE5;
+  --status-completed-text: #065F46;
+  --status-completed-border: #6EE7B7;
+
+  --status-cancelled-bg: #FEE2E2;
+  --status-cancelled-text: #991B1B;
+  --status-cancelled-border: #FCA5A5;
+}
+
+body.admin-body {
+  background-color: var(--admin-bg);
+  min-height: 100vh;
+}
+
+.admin-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--card-border);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.admin-title-badge {
+  background: #0E7490;
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Metric KPI Cards */
+.kpi-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.kpi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+}
+
+.kpi-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+.kpi-icon-blue { background: #E0F2FE; color: #0284C7; }
+.kpi-icon-amber { background: #FEF3C7; color: #D97706; }
+.kpi-icon-emerald { background: #D1FAE5; color: #059669; }
+.kpi-icon-purple { background: #F3E8FF; color: #7E22CE; }
+
+.kpi-value {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.kpi-label {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Tabs */
+.admin-nav-tabs {
+  border-bottom: 2px solid var(--card-border);
+  margin-bottom: 24px;
+  gap: 8px;
+}
+.admin-nav-tabs .nav-link {
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 20px;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.2s ease;
+}
+.admin-nav-tabs .nav-link:hover {
+  color: #0E7490;
+  background: rgba(14, 116, 144, 0.05);
+}
+.admin-nav-tabs .nav-link.active {
+  color: #0E7490;
+  border-bottom: 3px solid #0E7490;
+  background: transparent;
+  font-weight: 700;
+}
+
+/* Card Container */
+.dashboard-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+/* Status Badges */
+.badge-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid transparent;
+}
+.badge-status.Pending {
+  background: var(--status-pending-bg);
+  color: var(--status-pending-text);
+  border-color: var(--status-pending-border);
+}
+.badge-status.Confirmed {
+  background: var(--status-confirmed-bg);
+  color: var(--status-confirmed-text);
+  border-color: var(--status-confirmed-border);
+}
+.badge-status.Completed {
+  background: var(--status-completed-bg);
+  color: var(--status-completed-text);
+  border-color: var(--status-completed-border);
+}
+.badge-status.Cancelled {
+  background: var(--status-cancelled-bg);
+  color: var(--status-cancelled-text);
+  border-color: var(--status-cancelled-border);
+}
+
+/* Table */
+.admin-table {
+  width: 100%;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.admin-table thead th {
+  background: #F8FAFC;
+  color: #475569;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--card-border);
+}
+.admin-table tbody td {
+  padding: 16px;
+  border-bottom: 1px solid var(--card-border);
+  font-size: 0.92rem;
+}
+.admin-table tbody tr:hover {
+  background-color: #F8FAFC;
+}
+
+/* Action buttons */
+.btn-action-sm {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+.btn-approve {
+  background: #E0F2FE;
+  color: #0369A1;
+  border-color: #BAE6FD;
+}
+.btn-approve:hover {
+  background: #0284C7;
+  color: #FFFFFF;
+}
+.btn-complete {
+  background: #D1FAE5;
+  color: #047857;
+  border-color: #A7F3D0;
+}
+.btn-complete:hover {
+  background: #059669;
+  color: #FFFFFF;
+}
+.btn-cancel-action {
+  background: #FEE2E2;
+  color: #B91C1C;
+  border-color: #FECACA;
+}
+.btn-cancel-action:hover {
+  background: #DC2626;
+  color: #FFFFFF;
+}
+
+/* Inquiry cards */
+.inquiry-card {
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 20px;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+}
+.inquiry-card.resolved {
+  background: #F8FAFC;
+  opacity: 0.85;
+}
+.inquiry-card:hover {
+  border-color: #0E7490;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
